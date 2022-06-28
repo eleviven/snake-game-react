@@ -1,0 +1,37 @@
+import { FC, PropsWithChildren } from "react";
+import { PIXEL_SIZE, BOARD_SIZE } from "../../constants";
+import { numWithPx } from "../../utils";
+
+const Board: FC<PropsWithChildren> = ({ children }) => {
+  const rows = createList();
+
+  return (
+    <div className="relative inline-block border-t border-l">
+      {rows.map((row) => (
+        <div key={row} className="flex">
+          {rows.map((col) => (
+            <div
+              key={col}
+              className={`border-r border-b w-[${numWithPx(
+                PIXEL_SIZE
+              )}] h-[${numWithPx(PIXEL_SIZE)}]`}
+            />
+          ))}
+        </div>
+      ))}
+      <div className="absolute z-10 w-full h-full left-0 top-0">{children}</div>
+    </div>
+  );
+};
+
+const createList = (): number[] => {
+  let result: number[] = [];
+  for (let i = 0; i < BOARD_SIZE; i++) {
+    result.push(i);
+  }
+  return result;
+};
+
+Board.displayName = "Board";
+
+export default Board;
