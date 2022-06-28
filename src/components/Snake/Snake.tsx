@@ -12,13 +12,13 @@ const Snake: FC = () => {
         const styles: CSSProperties = {
           left: numWithPx(item.x),
           top: numWithPx(item.y),
+          height: numWithPx(PIXEL_SIZE),
+          width: numWithPx(PIXEL_SIZE),
         };
         return (
           <div
             key={index}
-            className={`absolute z-10 bg-red-500 w-[${numWithPx(
-              PIXEL_SIZE
-            )}] h-[${numWithPx(PIXEL_SIZE)}]`}
+            className={`absolute z-10 bg-red-500`}
             style={styles}
           />
         );

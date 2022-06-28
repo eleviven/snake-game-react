@@ -12,9 +12,11 @@ const Board: FC<PropsWithChildren> = ({ children }) => {
           {rows.map((col) => (
             <div
               key={col}
-              className={`border-r border-b w-[${numWithPx(
-                PIXEL_SIZE
-              )}] h-[${numWithPx(PIXEL_SIZE)}]`}
+              style={{
+                height: numWithPx(PIXEL_SIZE),
+                width: numWithPx(PIXEL_SIZE),
+              }}
+              className={`border-r border-b`}
             />
           ))}
         </div>

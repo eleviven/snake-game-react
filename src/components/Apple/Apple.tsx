@@ -13,16 +13,11 @@ const Apple: FC = () => {
   const styles: CSSProperties = {
     left: numWithPx(appleCoords.x),
     top: numWithPx(appleCoords.y),
+    width: numWithPx(PIXEL_SIZE),
+    height: numWithPx(PIXEL_SIZE),
   };
 
-  return (
-    <div
-      className={`absolute z-[1] bg-green-500 w-[${numWithPx(
-        PIXEL_SIZE
-      )}] h-[${numWithPx(PIXEL_SIZE)}]`}
-      style={styles}
-    />
-  );
+  return <div className={`absolute z-[1] bg-green-500`} style={styles} />;
 };
 
 Apple.displayName = "Apple";

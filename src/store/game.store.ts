@@ -40,7 +40,6 @@ export const useGameStore = create<IGameStore>((set, get) => ({
     set((state) => {
       const tails = [...state.snakeTails];
       let head = JSON.parse(JSON.stringify(tails[tails.length - 1]));
-      console.log(head);
 
       switch (state.direction) {
         case DIRECTIONS.RIGHT:
