@@ -57,15 +57,19 @@ const App: FC = () => {
     if (status === GAME_STATUSES.STOP) setStatus(GAME_STATUSES.START);
     switch (event.key) {
       case "ArrowLeft":
+      case "a":
         setDirection(DIRECTIONS.LEFT);
         break;
       case "ArrowRight":
+      case "d":
         setDirection(DIRECTIONS.RIGHT);
         break;
       case "ArrowDown":
+      case "s":
         setDirection(DIRECTIONS.DOWN);
         break;
       case "ArrowUp":
+      case "w":
         setDirection(DIRECTIONS.UP);
         break;
     }
