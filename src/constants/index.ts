@@ -1,3 +1,6 @@
+export const BOARD_SIZE = 22;
+export const PIXEL_SIZE = 18;
+
 export const DIRECTIONS: {
   LEFT: "LEFT";
   RIGHT: "RIGHT";
@@ -10,5 +13,9 @@ export const DIRECTIONS: {
   DOWN: "DOWN",
 };
 
-export const BOARD_SIZE = 25;
-export const PIXEL_SIZE = 20;
+export const DIRECTIONS_REVERSE = {
+  LEFT: "RIGHT",
+  RIGHT: "LEFT",
+  UP: "DOWN",
+  DOWN: "UP",
+};
