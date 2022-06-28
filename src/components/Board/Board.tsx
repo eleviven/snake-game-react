@@ -6,7 +6,7 @@ const Board: FC<PropsWithChildren> = ({ children }) => {
   const rows = createList();
 
   return (
-    <div className="relative inline-block border-t border-l">
+    <div className="relative inline-block border-t border-l border-gray-700 bg-slate-800 overflow-hidden">
       {rows.map((row) => (
         <div key={row} className="flex">
           {rows.map((col) => (
@@ -16,7 +16,7 @@ const Board: FC<PropsWithChildren> = ({ children }) => {
                 height: numWithPx(PIXEL_SIZE),
                 width: numWithPx(PIXEL_SIZE),
               }}
-              className={`border-r border-b`}
+              className={`border-r border-b border-gray-700`}
             />
           ))}
         </div>
